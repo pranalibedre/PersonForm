@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="StyleSheet.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="JavaScript.js"></script>
+</head>
+<body>
+    <div class="container-fluid cont">
+        <div class="card-body">
+            <h5 class="card-title">Add Person Details</h5>
+        </div>
+        <form class="form">
+            <div class="row mb-3">
+                <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control name" id="firstName" required="">
+                    <span class="error_form sp" id="fname_error"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="LastName" class="col-sm-2 col-form-label">Last Name</label>
+                <div class="col-sm-10" >
+                    <input type="text" class="form-control name" id="lastName" required="">
+                    <span class="error_form sp" id="lname_error"></span>
+                </div>
+            </div>
+            <fieldset class="form-group row">
+                <legend class="col-form-label col-sm-2 float-sm-left pt-0">Gender</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input gen" type="radio" name="gridRadios" id="gridRadios1" value="Male" >
+                        <label class="form-check-label" for="gridRadios1">
+                            Male
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input gen" type="radio" name="gridRadios" id="gridRadios2" value="Female">
+                        <label class="form-check-label" for="gridRadios2">
+                            Female
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input gen" type="radio" name="gridRadios" id="gridRadios3" value="Unknown">
+                        <label class="form-check-label" for="gridRadios3">
+                            Unknown
+                        </label>
+                    </div>
+                </div>
+                <span class="error_form" id="gender_error"></span>
+            </fieldset>
+            <div class="row mb-3">
+                <label for="DOB" class="col-sm-2 col-form-label" required="">Date of Birth</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="dob">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="age" class="col-sm-2 col-form-label" required="">Age</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="age">
+                    <span class="error_form" id="age_error"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="email" class="col-sm-2 col-form-label" required="">Email Id</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email">
+                    <span class="error_form" id="email_error"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="tel" class="col-sm-2 col-form-label" required="">Telephone No</label>
+                <div class="col-sm-10">
+                    <input type="tel" class="form-control" id="tel">
+                    <span class="error_form" id="tel_error"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="add1" class="col-sm-2 col-form-label">Address Line 1</label>
+                <div class="col-sm-10">
+                    <textarea class="add" name="form-control" rows="3" cols="93" id="add1" required=""></textarea>
+                    <span class="error_form" id="add1_error"></span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="add2" class="col-sm-2 col-form-label">Address Line 2</label>
+                <div class="col-sm-10 ">
+                    <textarea class="add" name="form-control" rows="3" cols="93" id="add2"></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-3 mb-3">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" required>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationDefault03">Country</label>
+                    <select class="custom-select" id="country" >
+                        <option value="" selected hidden>--Select Country--</option>
+                        <option value="India"> India</option>
+                        <option value="South Africa">South Africa </option>
+                        <option value="Sri Lanka">Sri Lanka </option>
+                        <option value="USA">USA </option>
+                        <option value="Malaysia">Malaysia </option>
+                        <option value="China">China </option>
+                        <option value="Dubai">Dubai </option>
+                        <option value="Argentina">Argentina</option>
+                    </select>
+                    <span class="error_form" id="country_error"></span>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationDefault04">State</label>
+                    <select class="custom-select" id="state" >
+                        <option value="" selected hidden>--Select State--</option>
+                        <option value="Maharashra">Maharashtra</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Kedah">Kedah</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Gauteng">Gauteng</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="California">California</option>
+                        <option value="Central Province">Central Province</option>
+                        <option value="Uva Province">Uva Province</option>
+                        <option value="Northen Cape">Northen Cape</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="zip">Zip</label>
+                    <input type="text" class="form-control" id="zip" required>
+                </div>
+            </div>
+            <button type="submit" id="sub" class="btn btn-light" >Submit</button>
+            <button type="reset" id="res" class="btn btn-danger btn-res">Reset</button>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<script type="text/javascript">
+        $('Document').ready(function () {
+            $('#res').click(function () {
+                alert('Confirm you want to reset the data');
+            });
+        });
+    </script>-->
+    <!--<div class="container">
+        <div class="title">
+            Add Person Details
+        </div>
+        <div class="form">
+            <div class="input_field">
+                <label for="First Name">First Name </label>
+                <input type="text" placeholder="Enter your First Name" id="First Name">
+            </div>
+            <div class="input_field">
+                <label for="Last Name">Last Name</label>
+                <input type="text" placeholder="Enter your Last Name" id="Last Name">
+            </div>
+            <div class="input_field">
+                <label for="Gender">Gender</label>
+                <select class="Gender" id="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Unknown">Unknown</option>
+                </select>
+            </div>
+            <div class="input_field">
+                <label for="DOB">Date of Birth</label>
+                <input type="date" placeholder="Enter your Birth Date" id="DOB">
+            </div>
+            <div class="input_field">
+                <label for="age">Age</label>
+                <input type="number" placeholder="Enter your Age" id="age">
+            </div>
+            <div class="input_field">
+                <label for="email">Email Id</label>
+                <input type="email" placeholder="Enter your Email" id="email">
+            </div>
+            <div class="input_field">
+                <label for="tel_no">Telephone No</label>
+                <input type="tel" placeholder="Enter your Contact No" id="tel_no">
+            </div>
+            <div class="input_field">
+                <label for="address1">Address Line 1</label>
+                <textarea name="address1" placeholder="Enter your Street Line 1"></textarea>
+            </div>
+            <div class="input_field">
+                <label for="address2">Address Line 2</label>
+                <textarea name="address2" placeholder="Enter your Street Line 2"></textarea>
+            </div>
+            <div class="input_field">
+                <label for="city">City </label>
+                <input type="text" placeholder="Enter your City" id="city">
+            </div>
+            <div class="input_field">
+                <label for="pincode">Pincode </label>
+                <input type="text" placeholder="Enter Pincode No" id="pincode">
+            </div>
+            <div class="input_field">
+                <label for="state">State </label>
+                <select class="State" id="state">
+                    <option value="Maharashra">Maharashtra</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Kedah">Kedah</option>
+                    <option value="Texas">Texas</option>
+                    <option value="Gauteng">Gauteng</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="California">California</option>
+                    <option value="Central Province">Central Province</option>
+                    <option value="Uva Province">Uva Province</option>
+                    <option value="Northen Cape">Northen Cape</option>
+                </select>
+            </div>
+            <div class="input_field">
+                <label for="country">Country </label>
+                <select class="Country" id="country">
+                    <option value="India"> India</option>
+                    <option value="South Africa">South Africa </option>
+                    <option value="Sri Lanka">Sri Lanka </option>
+                    <option value="USA">USA </option>
+                    <option value="Malaysia">Malaysia </option>
+                    <option value="China">China </option>
+                    <option value="Dubai">Dubai </option>
+                    <option value="Argentina">Argentina</option>
+                </select>
+            </div>
+            <div class="input_field">
+                    <input type="submit" id="Submit" value="Submit Now" />
+            </div>
+        </div>
+    </div>-->
+</body>
+
+</html>
